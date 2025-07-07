@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Process Interface</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Process Audio with AI</h1>
+        </header>
+        <main class="content-area">
+            <section class="json-display-area">
+                <h2>Generated JSON Process</h2>
+                <pre id="jsonOutput">Your JSON will appear here...</pre>
+            </section>
+            <aside class="chat-area">
+                <h2>Refinement Chat</h2>
+                <div id="chatMessages">
+                    <!-- Chat messages will appear here -->
+                </div>
+                <div class="chat-input">
+                    <input type="text" id="userInput" placeholder="Type your answer...">
+                    <button id="sendAnswerBtn">Send</button>
+                </div>
+            </aside>
+        </main>
+        <section class="controls-area">
+            <button id="startRecordBtn">Start Recording</button>
+            <button id="stopRecordBtn" disabled>Stop Recording</button>
+            <p id="statusMessage">Status: Idle</p>
+        </section>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
